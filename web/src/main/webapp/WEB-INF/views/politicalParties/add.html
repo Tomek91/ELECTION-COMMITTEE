@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ADD POLITICAL PARTY</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+    <div th:include="fragments/navigation">MENU</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-8 offset-2">
+                <h1>Add new political party</h1>
+                <form th:action="@{/political-parties/add}" method="post" th:object="${politicalParty}" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input id="name" type="text" class="form-control" th:field="*{name}"/>
+                    </div>
+                    <div th:if="${errors.containsKey('name')}">
+                        <p class="text-danger" th:text="${errors.get('name')}"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="setYear">Set Year</label>
+                        <input id="setYear" type="date" class="form-control" th:field="*{setYear}"/>
+                    </div>
+                    <div th:if="${errors.containsKey('setYear')}">
+                        <p class="text-danger" th:text="${errors.get('setYear')}"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="file">File</label>
+                        <input id="file" type="file" class="form-control-file" th:field="*{file}"/>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-success" type="submit">Add</button>
+                        <button class="btn btn-danger" type="reset">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

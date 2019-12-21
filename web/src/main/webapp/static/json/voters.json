@@ -1,0 +1,98 @@
+[
+  {
+    "id": null,
+    "pesel": "62101188375",
+    "eGender": "FEMALE",
+    "eEducation": "ŚREDNIE",
+    "constituencyDTO": {
+      "id": null,
+      "name": "WSCHÓD"
+    },
+    "isVoteInFirstTour": false,
+    "isVoteInSecondTour": false
+  },
+  {
+    "id": null,
+    "pesel": "68012618828",
+    "eGender": "FEMALE",
+    "eEducation": "WYŻSZE",
+    "constituencyDTO": {
+      "id": null,
+      "name": "WSCHÓD"
+    },
+    "isVoteInFirstTour": false,
+    "isVoteInSecondTour": false
+  },
+  {
+    "id": null,
+    "pesel": "63111344739",
+    "eGender": "FEMALE",
+    "eEducation": "PODSTAWOWE",
+    "constituencyDTO": {
+      "id": null,
+      "name": "ZACHÓD"
+    },
+    "isVoteInFirstTour": false,
+    "isVoteInSecondTour": false
+  },
+  {
+    "id": null,
+    "pesel": "53091634474",
+    "eGender": "FEMALE",
+    "eEducation": "PODSTAWOWE",
+    "constituencyDTO": {
+      "id": null,
+      "name": "ZACHÓD"
+    },
+    "isVoteInFirstTour": false,
+    "isVoteInSecondTour": false
+  },
+  {
+    "id": null,
+    "pesel": "81112884142",
+    "eGender": "MALE",
+    "eEducation": "ZAWODOWE",
+    "constituencyDTO": {
+      "id": null,
+      "name": "PÓŁNOC"
+    },
+    "isVoteInFirstTour": false,
+    "isVoteInSecondTour": false
+  },
+  {
+    "id": null,
+    "pesel": "83101294383",
+    "eGender": "MALE",
+    "eEducation": "ZAWODOWE",
+    "constituencyDTO": {
+      "id": null,
+      "name": "PÓŁNOC"
+    },
+    "isVoteInFirstTour": false,
+    "isVoteInSecondTour": false
+  },
+  {
+    "id": null,
+    "pesel": "73091721923",
+    "eGender": "MALE",
+    "eEducation": "ŚREDNIE",
+    "constituencyDTO": {
+      "id": null,
+      "name": "POŁUDNIE"
+    },
+    "isVoteInFirstTour": false,
+    "isVoteInSecondTour": false
+  },
+  {
+    "id": null,
+    "pesel": "89080325272",
+    "eGender": "MALE",
+    "eEducation": "GIMNAZJALNE",
+    "constituencyDTO": {
+      "id": null,
+      "name": "POŁUDNIE"
+    },
+    "isVoteInFirstTour": false,
+    "isVoteInSecondTour": false
+  }
+]

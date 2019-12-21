@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>MODIFY VOTER</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div th:include="fragments/navigation">MENU</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-8 offset-2">
+                <h1>Edit voter</h1>
+                <form th:action="@{/voters/modify}" method="post" th:object="${voter}">
+                    <div class="form-group">
+                        <label for="pesel">Birthday</label>
+                        <input id="pesel" type="text" class="form-control" th:field="*{pesel}"/>
+                    </div>
+                    <div th:if="${errors.containsKey('pesel')}">
+                        <p class="text-danger" th:text="${errors.get('pesel')}"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <ul id="gender" class="list-inline">
+                            <li class="list-inline-item mr-2" th:each="g : ${genders}">
+                                <input type="radio" th:field="*{EGender}" th:value="${g}" class="mr-1"/>
+                                <label th:text="${g}"></label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div th:if="${errors.containsKey('eGender')}">
+                        <p class="text-danger" th:text="${errors.get('eGender')}"></p>
+                    </div>
+                    <div class="form-group">
+                        <label for="education">Education</label>
+                        <ul id="education" class="list-inline">
+                            <li class="list-inline-item mr-2" th:each="e : ${educations}">
+                                <input type="radio" th:field="*{EEducation}" th:value="${e}" class="mr-1"/>
+                                <label th:text="${e}"></label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form-group">
+                        <label for="constituencies">Constituency</label>
+                        <select id="constituencies" th:field="*{constituencyDTO.id}">
+                            <option th:each="c : ${constituencies}" th:value="${c.id}" th:text="${c.name}"></option>
+                        </select>
+                    </div>
+                    <input type="text" class="form-control" hidden="hidden" readonly="readonly" th:field="*{id}"/>
+                    <div class="form-group">
+                        <button class="btn btn-success" type="submit">Update</button>
+                        <button class="btn btn-danger" type="reset">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SHOW ALL POLITICAL PARTIES</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div th:include="fragments/navigation">MENU</div>
+<div class="container">
+    <div class="row">
+            <div class="col-8 offset-2">
+                <div>
+                    <h4 class="mt-0 mb-1 header">PER CENT DECOMPOSITION BY GENDER [%]</h4>
+                    <table class="table table-warning">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Male</th>
+                            <th scope="col">Female</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td th:text="${statisticsByGender.malePercent}"></td>
+                            <td th:text="${statisticsByGender.femalePercent}"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h4 class="mt-0 mb-1 header">PER CENT DECOMPOSITION BY EDUCATION [%]</h4>
+                    <table class="table table-warning">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">BASIC</th>
+                            <th scope="col">SECONDARY SCHOOL</th>
+                            <th scope="col">HIGH SCHOOL</th>
+                            <th scope="col">OCCUPATIONAL</th>
+                            <th scope="col">UNIVERSITY</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td th:text="${statisticsByEducation.basicPercent}"></td>
+                            <td th:text="${statisticsByEducation.secondarySchoolPercent}"></td>
+                            <td th:text="${statisticsByEducation.highSchoolPercent}"></td>
+                            <td th:text="${statisticsByEducation.occupationalPercent}"></td>
+                            <td th:text="${statisticsByEducation.universityPercent}"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h4 class="mt-0 mb-1 header">PER CENT DECOMPOSITION BY CONSTITUENCY [%]</h4>
+                    <table class="table table-warning">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">EAST</th>
+                            <th scope="col">WEST</th>
+                            <th scope="col">SOUTH</th>
+                            <th scope="col">NORTH</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td th:text="${statisticsByConstituency.eastPercent}"></td>
+                            <td th:text="${statisticsByConstituency.westPercent}"></td>
+                            <td th:text="${statisticsByConstituency.southPercent}"></td>
+                            <td th:text="${statisticsByConstituency.northPercent}"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

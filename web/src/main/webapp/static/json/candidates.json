@@ -1,0 +1,194 @@
+[
+  {
+    "id": null,
+    "name": "OLA",
+    "surname": "WALCZAK",
+    "birthday": "1991-01-01",
+    "constituencyDTO": {
+      "id": null,
+      "name": "WSCHÓD"
+    },
+    "politicalPartyDTO": {
+      "id": null,
+      "name": "WOLNOŚĆ",
+      "setYear": "2016-12-22"
+    },
+    "photo": "pic1.jpg"
+  },
+  {
+    "id": null,
+    "name": "PIOTR",
+    "surname": "MRÓZ",
+    "birthday": "1991-04-22",
+    "constituencyDTO": {
+      "id": null,
+      "name": "ZACHÓD"
+    },
+    "politicalPartyDTO": {
+      "id": null,
+      "name": "WOLNOŚĆ",
+      "setYear": "2016-12-22"
+    },
+    "photo": "pic2.jpg"
+  },
+  {
+    "id": null,
+    "name": "WOJTEK",
+    "surname": "KOWAL",
+    "birthday": "1945-01-24",
+    "constituencyDTO": {
+      "id": null,
+      "name": "PÓŁNOC"
+    },
+    "politicalPartyDTO": {
+      "id": null,
+      "name": "WOLNOŚĆ",
+      "setYear": "2016-12-22"
+    },
+    "photo": "pic3.jpg"
+  },
+  {
+    "id": null,
+    "name": "MARYLA",
+    "surname": "KUBASIŃSKA",
+    "birthday": "1933-08-05",
+    "constituencyDTO": {
+      "id": null,
+      "name": "POŁUDNIE"
+    },
+    "politicalPartyDTO": {
+      "id": null,
+      "name": "WOLNOŚĆ",
+      "setYear": "2016-12-22"
+    },
+    "photo": "pic4.jpg"
+  },
+  {
+    "id": null,
+    "name": "ŁUKASZ",
+    "surname": "POLAK",
+    "birthday": "1987-06-01",
+    "constituencyDTO": {
+      "id": null,
+      "name": "WSCHÓD"
+    },
+    "politicalPartyDTO": {
+      "id": null,
+      "name": "MIŚ",
+      "setYear": "2002-09-12"
+    },
+    "photo": "pic5.jpg"
+  },
+  {
+    "id": null,
+    "name": "PAULA",
+    "surname": "MRÓZ",
+    "birthday": "1941-02-12",
+    "constituencyDTO": {
+      "id": null,
+      "name": "ZACHÓD"
+    },
+    "politicalPartyDTO": {
+      "id": null,
+      "name": "MIŚ",
+      "setYear": "2002-09-12"
+    },
+    "photo": "pic6.jpg"
+  },
+  {
+    "id": null,
+    "name": "MATEUSZ",
+    "surname": "RYŚ",
+    "birthday": "1975-03-03",
+    "constituencyDTO": {
+      "id": null,
+      "name": "PÓŁNOC"
+    },
+    "politicalPartyDTO": {
+      "id": null,
+      "name": "MIŚ",
+      "setYear": "2002-09-12"
+    },
+    "photo": "pic7.jpg"
+  },
+  {
+    "id": null,
+    "name": "URSZULA",
+    "surname": "BĄK",
+    "birthday": "1983-09-15",
+    "constituencyDTO": {
+      "id": null,
+      "name": "POŁUDNIE"
+    },
+    "politicalPartyDTO": {
+      "id": null,
+      "name": "MIŚ",
+      "setYear": "2002-09-12"
+    },
+    "photo": "pic8.jpg"
+  },
+  {
+    "id": null,
+    "name": "MIŁOSZ",
+    "surname": "RAK",
+    "birthday": "1917-09-01",
+    "constituencyDTO": {
+      "id": null,
+      "name": "WSCHÓD"
+    },
+    "politicalPartyDTO": {
+      "id": null,
+      "name": "PIRACI",
+      "setYear": "2010-01-01"
+    },
+    "photo": "pic9.jpg"
+  },
+  {
+    "id": null,
+    "name": "JUSTYNA",
+    "surname": "KOBYLAREK",
+    "birthday": "1931-02-13",
+    "constituencyDTO": {
+      "id": null,
+      "name": "ZACHÓD"
+    },
+    "politicalPartyDTO": {
+      "id": null,
+      "name": "PIRACI",
+      "setYear": "2010-01-01"
+    },
+    "photo": "pic10.jpg"
+  },
+  {
+    "id": null,
+    "name": "MARIA",
+    "surname": "RYŚ",
+    "birthday": "1985-04-03",
+    "constituencyDTO": {
+      "id": null,
+      "name": "PÓŁNOC"
+    },
+    "politicalPartyDTO": {
+      "id": null,
+      "name": "PIRACI",
+      "setYear": "2010-01-01"
+    },
+    "photo": "pic11.jpg"
+  },
+  {
+    "id": null,
+    "name": "EWELINA",
+    "surname": "NOWAK",
+    "birthday": "1984-03-11",
+    "constituencyDTO": {
+      "id": null,
+      "name": "POŁUDNIE"
+    },
+    "politicalPartyDTO": {
+      "id": null,
+      "name": "PIRACI",
+      "setYear": "2010-01-01"
+    },
+    "photo": "pic12.jpg"
+  }
+]

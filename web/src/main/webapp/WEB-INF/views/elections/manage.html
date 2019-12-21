@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>MANAGE</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+    <div th:include="fragments/navigation">MENU</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-8 offset-2" >
+                <ul class="list-group">
+                    <li class="list-group-item" th:if="${!electionFirstTour}">
+                        <a role="button" class="btn btn-info btn-lg btn-block" th:href="@{/default-data}">LOAD DATA</a>
+                    </li>
+                    <li class="list-group-item" th:if="${!electionFirstTour}">
+                        <a role="button" class="btn btn-info btn-lg btn-block" th:href="@{/elections/first-tour/start-election}">START ELECTION</a>
+                    </li>
+                    <li class="list-group-item" th:if="${electionFirstTour and !electionFirstTourResults}">
+                        <a role="button" class="btn btn-info btn-lg btn-block" th:href="@{/elections/first-tour/end-election}">END ELECTION</a>
+                    </li>
+                    <li class="list-group-item" th:if="${electionFirstTourResults}">
+                        <a role="button" class="btn btn-info btn-lg btn-block" th:href="@{/elections/first-tour/results}">RESULTS FIRST TOUR</a>
+                        <a role="button" class="btn btn-info btn-lg btn-block" th:href="@{/elections/first-tour/statistics}">STATISTICS FIRST TOUR</a>
+                    </li>
+                    <li class="list-group-item" th:if="${electionFirstTourResults and !electionSecondTour}">
+                        <p>Potrzebna jest druga tura wybor&#243;w w okr&#281;gu / okr&#281;gach:<br/><span th:each="c : ${constituencies}" th:text="${c.name} + '&nbsp;'"> </span></p>
+                        <a role="button" class="btn btn-info btn-lg btn-block" th:href="@{/elections/second-tour/start-election}">START SECOND TOUR</a>
+                    </li>
+                    <li class="list-group-item" th:if="${electionSecondTour and !electionSecondTourResults}">
+                        <a role="button" class="btn btn-info btn-lg btn-block" th:href="@{/elections/second-tour/end-election}">END SECOND TOUR</a>
+                    </li>
+                    <li class="list-group-item" th:if="${electionSecondTourResults}">
+                        <a role="button" class="btn btn-info btn-lg btn-block" th:href="@{/elections/second-tour/results}">RESULTS SECOND TOUR</a>
+                        <a role="button" class="btn btn-info btn-lg btn-block" th:href="@{/elections/second-tour/statistics}">STATISTICS SECOND TOUR</a>
+                    </li>
+                    <li class="list-group-item" th:if="${electionFirstTourResults and electionSecondTourResults}">
+                        <a role="button" class="btn btn-info btn-lg btn-block" th:href="@{/elections/reset}">RESET ELECTIONS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
