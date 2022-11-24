@@ -26,7 +26,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <springframework.version>4.3.20.RELEASE</springframework.version>
-        <hibernate.version>5.2.17.Final</hibernate.version>
+        <hibernate.version>5.3.20.Final</hibernate.version>
         <mysql.connector.version>5.1.47</mysql.connector.version>
         <lombok.version>1.18.4</lombok.version>
         <thymeleaf.version>3.0.3.RELEASE</thymeleaf.version>
